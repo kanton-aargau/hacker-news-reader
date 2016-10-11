@@ -1,0 +1,20 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HackerNewsReader"
+             x:Class="HackerNewsReader.ListItem" 
+             mc:Ignorable="d" 
+             d:DesignHeight="304" d:DesignWidth="300">
+  <Grid>
+    <DockPanel LastChildFill="False">
+      <TextBlock VerticalAlignment="Center" DockPanel.Dock="Left">
+        <Hyperlink FontWeight="Bold" NavigateUri="{Binding Url}" RequestNavigate="OnRequestNavigate">
+          <Run Text="{Binding Path=Title}" />
+        </Hyperlink>
+      </TextBlock>
+      <Label VerticalAlignment="Center" Content="{Binding Host}" DockPanel.Dock="Right"/>
+    </DockPanel>
+  </Grid>
+</UserControl>
